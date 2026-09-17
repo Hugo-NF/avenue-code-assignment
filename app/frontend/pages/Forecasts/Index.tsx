@@ -1,10 +1,15 @@
+import { type FormEvent } from 'react'
 import { Head, useForm, usePage } from '@inertiajs/react'
 
-export default function Index({ address }) {
+interface Props {
+  address: string | null
+}
+
+export default function Index({ address }: Props) {
   const { errors } = usePage().props
   const form = useForm({ address: address || '' })
 
-  function handleSubmit(event) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     form.post('/')
   }
