@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://air-quality-api.open-meteo.com/v1/air-quality?current=us_aqi,european_aqi,pm2_5,pm10&latitude=37.38605&longitude=-122.08385&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - air-quality-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 17:20:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuNCwibG9uZ2l0dWRlIjotMTIyLjEsImdlbmVyYXRpb250aW1lX21zIjowLjM3NDc5NDAwNjM0NzY1NjI1LCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0yNTIwMCwidGltZXpvbmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwidGltZXpvbmVfYWJicmV2aWF0aW9uIjoiR01ULTciLCJlbGV2YXRpb24iOjM3LjAsImN1cnJlbnRfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJpbnRlcnZhbCI6InNlY29uZHMiLCJ1c19hcWkiOiJVU0FRSSIsImV1cm9wZWFuX2FxaSI6IkVBUUkiLCJwbTJfNSI6Is68Zy9twrMiLCJwbTEwIjoizrxnL23CsyJ9LCJjdXJyZW50Ijp7InRpbWUiOiIyMDI2LTA5LTE4VDEwOjAwIiwiaW50ZXJ2YWwiOjM2MDAsInVzX2FxaSI6NTIsImV1cm9wZWFuX2FxaSI6MzMsInBtMl81IjoxMS40LCJwbTEwIjoxNS4wfX0=
+  recorded_at: Fri, 18 Sep 2026 17:20:59 GMT
+- request:
+    method: get
+    uri: https://air-quality-api.open-meteo.com/v1/air-quality?current=us_aqi,european_aqi,pm2_5,pm10&latitude=40.71427&longitude=-74.00597&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - air-quality-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 17:21:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6NDAuNjk5OTk3LCJsb25naXR1ZGUiOi03NC4wLCJnZW5lcmF0aW9udGltZV9tcyI6MC43NzAwOTIwMTA0OTgwNDY5LCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0xNDQwMCwidGltZXpvbmUiOiJBbWVyaWNhL05ld19Zb3JrIiwidGltZXpvbmVfYWJicmV2aWF0aW9uIjoiR01ULTQiLCJlbGV2YXRpb24iOjUxLjAsImN1cnJlbnRfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJpbnRlcnZhbCI6InNlY29uZHMiLCJ1c19hcWkiOiJVU0FRSSIsImV1cm9wZWFuX2FxaSI6IkVBUUkiLCJwbTJfNSI6Is68Zy9twrMiLCJwbTEwIjoizrxnL23CsyJ9LCJjdXJyZW50Ijp7InRpbWUiOiIyMDI2LTA5LTE4VDEzOjAwIiwiaW50ZXJ2YWwiOjM2MDAsInVzX2FxaSI6NjQsImV1cm9wZWFuX2FxaSI6NTksInBtMl81Ijo4LjYsInBtMTAiOjkuM319
+  recorded_at: Fri, 18 Sep 2026 17:21:00 GMT
+recorded_with: VCR 6.4.0
