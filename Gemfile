@@ -75,4 +75,4 @@ gem "inertia_rails", "~> 3.22"
 
 gem "vite_rails", "~> 3.11"
 
-gem "json", "~> 2.9"
+gem "json", "~> 3.0"
