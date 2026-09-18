@@ -114,6 +114,17 @@ to `master`, with four parallel jobs:
 Dependabot is configured to open weekly PRs for both Bundler and GitHub
 Actions dependency updates.
 
+Bonus usages of the Open-Meteo API:
+
+- **Daily forecast**: a 7-day view of highs/lows, sunrise/sunset, and today's peak UV index.
+- **Hourly forecast**: a rolling window (12/24/48/72h, user-selectable) of temperature,
+  precipitation, wind speed/gusts/direction, and condition.
+- **Current conditions**: humidity, feels-like temperature, cloud cover, pressure, dew
+  point, visibility, and soil temperature/moisture.
+- **Air quality**: a second Open-Meteo API (also free, no key required) for US/European
+  AQI and PM2.5/PM10, cached and displayed independently from the forecast.
+- **Unit selection**: a metric/imperial toggle and an hourly-window picker (12–72h).
+
 ## What could I've done next with more time
 
 - **Add frontend/e2e tests**: `capybara` and `selenium-webdriver` are
@@ -126,7 +137,3 @@ Actions dependency updates.
 - **Improve geocoding for addresses outside the US**: add a map with
   better geocoding for addresses worldwide and improved overall
   interactivity.
-- **Explore more of the Weather API**: show a multi-day forecast view
-  (daily highs/lows over the coming days) instead of just the current
-  temperature and today's high/low, and surface other Open-Meteo
-  data points, like precipitation and wind.
