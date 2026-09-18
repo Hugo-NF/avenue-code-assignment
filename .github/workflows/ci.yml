@@ -94,6 +94,18 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install JavaScript packages
+        run: pnpm install --frozen-lockfile
+
       - name: Run tests
         env:
           RAILS_ENV: test
