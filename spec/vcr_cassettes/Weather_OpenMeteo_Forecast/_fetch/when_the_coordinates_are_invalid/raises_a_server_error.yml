@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&latitude=999&longitude=999&temperature_unit=celsius&timezone=auto
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,cloud_cover,surface_pressure&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&forecast_hours=24&hourly=temperature_2m,precipitation,precipitation_probability,wind_speed_10m,wind_gusts_10m,wind_direction_10m,weather_code,dew_point_2m,cloud_cover,surface_pressure,visibility,uv_index,soil_temperature_0cm,soil_moisture_0_to_1cm&latitude=999&longitude=999&precipitation_unit=mm&temperature_unit=celsius&timezone=auto&wind_speed_unit=kmh
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       message: Bad Request
     headers:
       Date:
-      - Fri, 18 Sep 2026 12:11:54 GMT
+      - Fri, 18 Sep 2026 17:21:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -31,6 +31,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJlcnJvciI6dHJ1ZSwicmVhc29uIjoiTGF0aXR1ZGUgbXVzdCBiZSBpbiByYW5nZSBvZiAtOTAgdG8gOTDCsC4gR2l2ZW46IDk5OS4wLiJ9
-  recorded_at: Fri, 18 Sep 2026 12:11:54 GMT
+        eyJyZWFzb24iOiJMYXRpdHVkZSBtdXN0IGJlIGluIHJhbmdlIG9mIC05MCB0byA5MMKwLiBHaXZlbjogOTk5LjAuIiwiZXJyb3IiOnRydWV9
+  recorded_at: Fri, 18 Sep 2026 17:21:03 GMT
 recorded_with: VCR 6.4.0
