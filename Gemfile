@@ -46,6 +46,8 @@ group :development, :test do
   # Loads environment variables from .env files [https://github.com/bkeepers/dotenv]
   gem "dotenv-rails"
 
+  gem "rspec-rails"
+
   # Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
   gem "bundler-audit", require: false
 
