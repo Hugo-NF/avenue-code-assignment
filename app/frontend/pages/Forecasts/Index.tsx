@@ -1,11 +1,26 @@
 import { useState, type FormEvent } from 'react'
-import { Head, useForm, usePage } from '@inertiajs/react'
+import { Head, router, useForm, usePage } from '@inertiajs/react'
+
+interface Forecast {
+  detected_address: string | null
+  coordinates: string
+  current_temperature: number
+  high_temperature: number
+  low_temperature: number
+  daily_highs: number[]
+  daily_lows: number[]
+  dates: string[]
+  cache_hit: boolean
+  geocoding_cache_hit: boolean | null
+  expires_in: string
+}
 
 interface Props {
   address: string | null
+  forecast: Forecast | null
 }
 
-export default function Index({ address }: Props) {
+export default function Index({ address, forecast }: Props) {
   const { errors } = usePage().props
   const form = useForm({ address: address || '' })
   const [locating, setLocating] = useState(false)
@@ -13,7 +28,9 @@ export default function Index({ address }: Props) {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    form.post('/')
+    form.post('/', {
+      onSuccess: () => form.setData('address', ''),
+    })
   }
 
   function handleUseLocation() {
@@ -29,8 +46,9 @@ export default function Index({ address }: Props) {
       (position) => {
         setLocating(false)
         const { latitude, longitude } = position.coords
-        form.setData('address', `${latitude},${longitude}`)
-        form.post('/')
+        router.post('/', { latitude, longitude }, {
+          onSuccess: () => form.setData('address', ''),
+        })
       },
       (error) => {
         setLocating(false)
@@ -78,8 +96,14 @@ export default function Index({ address }: Props) {
         </button>
       </form>
 
-      {address && (
-        <p className="text-gray-600">Looking up the forecast for: {address}</p>
+      {forecast && (
+        <div>
+          {forecast.detected_address && <p>Detected address: {forecast.detected_address}</p>}
+          <p>Coordinates: {forecast.coordinates}</p>
+          <p>Current: {forecast.current_temperature}°C</p>
+          <p>High: {forecast.high_temperature}°C / Low: {forecast.low_temperature}°C</p>
+          {forecast.cache_hit && <p>(Cached response: expires in {forecast.expires_in})</p>}
+        </div>
       )}
     </div>
   )
