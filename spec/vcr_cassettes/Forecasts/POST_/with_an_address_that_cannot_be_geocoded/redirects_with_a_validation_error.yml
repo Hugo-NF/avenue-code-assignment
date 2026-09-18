@@ -21,17 +21,17 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Sep 2026 12:49:14 GMT
+      - Fri, 18 Sep 2026 17:21:47 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '31'
+      - '30'
       Connection:
       - keep-alive
       X-Encoding-Time:
-      - 0.0037908554077148438 ms
+      - 0.0014066696166992188 ms
     body:
       encoding: ASCII-8BIT
-      string: '{"generationtime_ms":0.2514124}'
-  recorded_at: Fri, 18 Sep 2026 12:49:14 GMT
+      string: '{"generationtime_ms":0.182271}'
+  recorded_at: Fri, 18 Sep 2026 17:21:47 GMT
 recorded_with: VCR 6.4.0
