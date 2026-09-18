@@ -21,23 +21,23 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Sep 2026 13:21:59 GMT
+      - Fri, 18 Sep 2026 18:47:01 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '434'
+      - '435'
       Connection:
       - keep-alive
       X-Encoding-Time:
-      - 0.004112720489501953 ms
+      - 0.003826618194580078 ms
     body:
       encoding: ASCII-8BIT
       string: '{"results":[{"id":5375480,"name":"Mountain View","latitude":37.38605,"longitude":-122.08385,"elevation":32.0,"feature_code":"PPL","country_code":"US","admin1_id":5332921,"admin2_id":5393021,"timezone":"America/Los_Angeles","population":80435,"postcodes":["94035","94039","94040","94041","94042","94043"],"country_id":6252001,"country":"United
-        States","admin1":"California","admin2":"Santa Clara County"}],"generationtime_ms":0.803113}'
-  recorded_at: Fri, 18 Sep 2026 13:22:00 GMT
+        States","admin1":"California","admin2":"Santa Clara County"}],"generationtime_ms":0.6394386}'
+  recorded_at: Fri, 18 Sep 2026 18:47:01 GMT
 - request:
     method: get
-    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&latitude=37.38605&longitude=-122.08385&temperature_unit=celsius&timezone=auto
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,cloud_cover,surface_pressure&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&forecast_hours=24&hourly=temperature_2m,precipitation,precipitation_probability,wind_speed_10m,wind_gusts_10m,wind_direction_10m,weather_code,dew_point_2m,cloud_cover,surface_pressure,visibility,uv_index,soil_temperature_0cm,soil_moisture_0_to_1cm&latitude=37.38605&longitude=-122.08385&precipitation_unit=mm&temperature_unit=celsius&timezone=auto&wind_speed_unit=kmh
     body:
       encoding: US-ASCII
       string: ''
@@ -56,7 +56,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 18 Sep 2026 13:22:00 GMT
+      - Fri, 18 Sep 2026 18:47:02 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -66,6 +66,105 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        eyJsYXRpdHVkZSI6MzcuMzkwMTksImxvbmdpdHVkZSI6LTEyMi4wNzEzMzUsImdlbmVyYXRpb250aW1lX21zIjowLjE1NzExNzg0MzYyNzkyOTcsInV0Y19vZmZzZXRfc2Vjb25kcyI6LTI1MjAwLCJ0aW1lem9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQtNyIsImVsZXZhdGlvbiI6MzcuMCwiY3VycmVudF91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsImludGVydmFsIjoic2Vjb25kcyIsInRlbXBlcmF0dXJlXzJtIjoiwrBDIn0sImN1cnJlbnQiOnsidGltZSI6IjIwMjYtMDktMThUMDY6MTUiLCJpbnRlcnZhbCI6OTAwLCJ0ZW1wZXJhdHVyZV8ybSI6MTIuMH0sImRhaWx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm1fbWF4IjoiwrBDIiwidGVtcGVyYXR1cmVfMm1fbWluIjoiwrBDIn0sImRhaWx5Ijp7InRpbWUiOlsiMjAyNi0wOS0xOCIsIjIwMjYtMDktMTkiLCIyMDI2LTA5LTIwIiwiMjAyNi0wOS0yMSIsIjIwMjYtMDktMjIiLCIyMDI2LTA5LTIzIiwiMjAyNi0wOS0yNCJdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOlsyNC43LDIyLjksMjQuMiwyNy42LDI3LjksMjkuNywzMC42XSwidGVtcGVyYXR1cmVfMm1fbWluIjpbMTEuNywxMi44LDE1LjEsMTQuMSwxNC45LDE3LjgsMTguNV19fQ==
-  recorded_at: Fri, 18 Sep 2026 13:22:00 GMT
+        eyJsYXRpdHVkZSI6MzcuMzkwMTksImxvbmdpdHVkZSI6LTEyMi4wNzEzMzUsImdlbmVyYXRpb250aW1lX21zIjoxLjA5NDEwMjg1OTQ5NzA3MDMsInV0Y19vZmZzZXRfc2Vjb25kcyI6LTI1MjAwLCJ0aW1lem9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQtNyIsImVsZXZhdGlvbiI6MzcuMCwiY3VycmVudF91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsImludGVydmFsIjoic2Vjb25kcyIsInRlbXBlcmF0dXJlXzJtIjoiwrBDIiwiYXBwYXJlbnRfdGVtcGVyYXR1cmUiOiLCsEMiLCJyZWxhdGl2ZV9odW1pZGl0eV8ybSI6IiUiLCJ3ZWF0aGVyX2NvZGUiOiJ3bW8gY29kZSIsImNsb3VkX2NvdmVyIjoiJSIsInN1cmZhY2VfcHJlc3N1cmUiOiJoUGEifSwiY3VycmVudCI6eyJ0aW1lIjoiMjAyNi0wOS0xOFQxMTo0NSIsImludGVydmFsIjo5MDAsInRlbXBlcmF0dXJlXzJtIjoyMC4yLCJhcHBhcmVudF90ZW1wZXJhdHVyZSI6MjIuMiwicmVsYXRpdmVfaHVtaWRpdHlfMm0iOjc3LCJ3ZWF0aGVyX2NvZGUiOjAsImNsb3VkX2NvdmVyIjoxMiwic3VyZmFjZV9wcmVzc3VyZSI6MTAxNS4zfSwiaG91cmx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm0iOiLCsEMiLCJwcmVjaXBpdGF0aW9uIjoibW0iLCJwcmVjaXBpdGF0aW9uX3Byb2JhYmlsaXR5IjoiJSIsIndpbmRfc3BlZWRfMTBtIjoia20vaCIsIndpbmRfZ3VzdHNfMTBtIjoia20vaCIsIndpbmRfZGlyZWN0aW9uXzEwbSI6IsKwIiwid2VhdGhlcl9jb2RlIjoid21vIGNvZGUiLCJkZXdfcG9pbnRfMm0iOiLCsEMiLCJjbG91ZF9jb3ZlciI6IiUiLCJzdXJmYWNlX3ByZXNzdXJlIjoiaFBhIiwidmlzaWJpbGl0eSI6Im0iLCJ1dl9pbmRleCI6IiIsInNvaWxfdGVtcGVyYXR1cmVfMGNtIjoiwrBDIiwic29pbF9tb2lzdHVyZV8wX3RvXzFjbSI6Im3Csy9twrMifSwiaG91cmx5Ijp7InRpbWUiOlsiMjAyNi0wOS0xOFQxMTowMCIsIjIwMjYtMDktMThUMTI6MDAiLCIyMDI2LTA5LTE4VDEzOjAwIiwiMjAyNi0wOS0xOFQxNDowMCIsIjIwMjYtMDktMThUMTU6MDAiLCIyMDI2LTA5LTE4VDE2OjAwIiwiMjAyNi0wOS0xOFQxNzowMCIsIjIwMjYtMDktMThUMTg6MDAiLCIyMDI2LTA5LTE4VDE5OjAwIiwiMjAyNi0wOS0xOFQyMDowMCIsIjIwMjYtMDktMThUMjE6MDAiLCIyMDI2LTA5LTE4VDIyOjAwIiwiMjAyNi0wOS0xOFQyMzowMCIsIjIwMjYtMDktMTlUMDA6MDAiLCIyMDI2LTA5LTE5VDAxOjAwIiwiMjAyNi0wOS0xOVQwMjowMCIsIjIwMjYtMDktMTlUMDM6MDAiLCIyMDI2LTA5LTE5VDA0OjAwIiwiMjAyNi0wOS0xOVQwNTowMCIsIjIwMjYtMDktMTlUMDY6MDAiLCIyMDI2LTA5LTE5VDA3OjAwIiwiMjAyNi0wOS0xOVQwODowMCIsIjIwMjYtMDktMTlUMDk6MDAiLCIyMDI2LTA5LTE5VDEwOjAwIl0sInRlbXBlcmF0dXJlXzJtIjpbMTkuMCwyMC41LDIyLjAsMjMuNiwyNC44LDI0LjcsMjMuNSwyMi4zLDE5LjUsMTcuNiwxNi40LDE1LjUsMTUuMywxNC43LDE0LjEsMTMuNywxMy41LDEzLjksMTMuNywxMy41LDEzLjUsMTMuNywxNS4xLDE3LjBdLCJwcmVjaXBpdGF0aW9uIjpbMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDBdLCJwcmVjaXBpdGF0aW9uX3Byb2JhYmlsaXR5IjpbMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDBdLCJ3aW5kX3NwZWVkXzEwbSI6WzYuOSw5LjQsMTAuOCwxMS45LDEyLjMsMTMuNywxMy45LDEyLjgsMTEuNCw2LjYsMy4yLDYuMywzLjcsMy43LDQuNCw0LjIsNC41LDQuMiwzLjgsMy44LDMuNCwzLjQsNC4wLDQuN10sIndpbmRfZ3VzdHNfMTBtIjpbNy42LDEwLjgsMTIuNiwxNC44LDE1LjUsMTcuMywxOS40LDIwLjUsMTguNywxNS4xLDMuMiw5LjQsNy4yLDYuNSw4LjYsOS43LDcuOSw1LjgsNS4wLDUuNCw1LjQsNS4wLDUuOCw0LjddLCJ3aW5kX2RpcmVjdGlvbl8xMG0iOls2LDcsMzYwLDM1NSwzNTMsMiwxMCwxMCwxOCwyOSwxMTcsMTE0LDE1MSwyMDksMjM1LDIwMCwxNjYsMTQ5LDEzOSwxMzksMTQ4LDE2MiwxMTcsOTBdLCJ3ZWF0aGVyX2NvZGUiOlsxLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwxLDAsMCwwLDMsNDUsNDUsNDUsNDUsNDUsMiwwXSwiZGV3X3BvaW50XzJtIjpbMTUuNSwxNi4xLDE1LjgsMTQuNSwxMy42LDEzLjMsMTMuOSwxNC4xLDEzLjgsMTMuNSwxMy44LDE0LjAsMTMuOCwxMy40LDEzLjIsMTIuNiwxMi43LDEzLjgsMTMuNywxMy41LDEzLjUsMTMuNiwxMy43LDE0LjNdLCJjbG91ZF9jb3ZlciI6WzIyLDEwLDMsMCwwLDAsMCwwLDAsMCwyLDE1LDMwLDExLDEwLDEzLDkwLDEwMCwxMDAsMTAwLDEwMCwxMDAsNjcsMTddLCJzdXJmYWNlX3ByZXNzdXJlIjpbMTAxNi4zLDEwMTUuMSwxMDE1LjAsMTAxNC44LDEwMTQuMCwxMDEzLjUsMTAxMy4wLDEwMTIuOCwxMDEyLjcsMTAxMy4xLDEwMTMuNCwxMDEzLjMsMTAxMi43LDEwMTIuNiwxMDEyLjMsMTAxMi4xLDEwMTIuMiwxMDEyLjIsMTAxMi40LDEwMTIuMiwxMDEyLjMsMTAxMi4xLDEwMTIuMywxMDEyLjRdLCJ2aXNpYmlsaXR5IjpbMTczMDAuMDAsMTkwMDAuMDAsMjMyMDAuMDAsMzEwMDAuMDAsMzY2MDAuMDAsMzc3MDAuMDAsMzI5MDAuMDAsMjg5MDAuMDAsMjIyMDAuMDAsMTg3MDAuMDAsMTU0MDAuMDAsMTMyMDAuMDAsMTM0MDAuMDAsMTMwMDAuMDAsMTI0MDAuMDAsMTIyMDAuMDAsMTIyMDAuMDAsMjAwLjAwLDEwMC4wMCwxMDAuMDAsMTAwLjAwLDEwMC4wMCwxMzAwMC4wMCwxNTcwMC4wMF0sInV2X2luZGV4IjpbNC41NSw1LjgwLDYuNTAsNi41MCw1LjkwLDQuNzAsMy4xNSwxLjYwLDAuNDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4zNSwxLjQ1LDIuOTVdLCJzb2lsX3RlbXBlcmF0dXJlXzBjbSI6WzI1LjgsMjguMywyOS4zLDI5LjcsMjkuMiwyNy41LDI0LjksMjEuMywxNy4yLDE0LjYsMTMuNywxMy40LDEzLjYsMTMuOCwxMy44LDEzLjcsMTMuNiwxMy4zLDEzLjIsMTMuMSwxMi43LDE1LjMsMjIuNywyNi42XSwic29pbF9tb2lzdHVyZV8wX3RvXzFjbSI6WzAuMDYyLDAuMDYxLDAuMDYwLDAuMDU5LDAuMDU5LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU5LDAuMDU5LDAuMDYwLDAuMDYwLDAuMDYxLDAuMDYxLDAuMDYxLDAuMDYyLDAuMDYyLDAuMDYzLDAuMDYzLDAuMDYzLDAuMDYzLDAuMDYzXX0sImRhaWx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm1fbWF4IjoiwrBDIiwidGVtcGVyYXR1cmVfMm1fbWluIjoiwrBDIiwic3VucmlzZSI6Imlzbzg2MDEiLCJzdW5zZXQiOiJpc284NjAxIiwidXZfaW5kZXhfbWF4IjoiIn0sImRhaWx5Ijp7InRpbWUiOlsiMjAyNi0wOS0xOCIsIjIwMjYtMDktMTkiLCIyMDI2LTA5LTIwIiwiMjAyNi0wOS0yMSIsIjIwMjYtMDktMjIiLCIyMDI2LTA5LTIzIiwiMjAyNi0wOS0yNCJdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOlsyNC44LDI0LjMsMjQuMiwyNy42LDI3LjksMjkuNywzMC42XSwidGVtcGVyYXR1cmVfMm1fbWluIjpbMTIuOCwxMy41LDEzLjEsMTQuMSwxNC45LDE3LjgsMTguNV0sInN1bnJpc2UiOlsiMjAyNi0wOS0xOFQwNjo1MiIsIjIwMjYtMDktMTlUMDY6NTMiLCIyMDI2LTA5LTIwVDA2OjU0IiwiMjAyNi0wOS0yMVQwNjo1NSIsIjIwMjYtMDktMjJUMDY6NTYiLCIyMDI2LTA5LTIzVDA2OjU3IiwiMjAyNi0wOS0yNFQwNjo1NyJdLCJzdW5zZXQiOlsiMjAyNi0wOS0xOFQxOToxMSIsIjIwMjYtMDktMTlUMTk6MDkiLCIyMDI2LTA5LTIwVDE5OjA4IiwiMjAyNi0wOS0yMVQxOTowNiIsIjIwMjYtMDktMjJUMTk6MDQiLCIyMDI2LTA5LTIzVDE5OjAzIiwiMjAyNi0wOS0yNFQxOTowMSJdLCJ1dl9pbmRleF9tYXgiOls2LjUwLDYuNTUsNS4xNSw2LjQ1LDYuNDAsNi4zNSw2LjM1XX19
+  recorded_at: Fri, 18 Sep 2026 18:47:02 GMT
+- request:
+    method: get
+    uri: https://air-quality-api.open-meteo.com/v1/air-quality?current=us_aqi,european_aqi,pm2_5,pm10&latitude=37.38605&longitude=-122.08385&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - air-quality-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 18:47:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuNCwibG9uZ2l0dWRlIjotMTIyLjEsImdlbmVyYXRpb250aW1lX21zIjowLjI3MTc5NzE4MDE3NTc4MTI1LCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0yNTIwMCwidGltZXpvbmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwidGltZXpvbmVfYWJicmV2aWF0aW9uIjoiR01ULTciLCJlbGV2YXRpb24iOjM3LjAsImN1cnJlbnRfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJpbnRlcnZhbCI6InNlY29uZHMiLCJ1c19hcWkiOiJVU0FRSSIsImV1cm9wZWFuX2FxaSI6IkVBUUkiLCJwbTJfNSI6Is68Zy9twrMiLCJwbTEwIjoizrxnL23CsyJ9LCJjdXJyZW50Ijp7InRpbWUiOiIyMDI2LTA5LTE4VDExOjAwIiwiaW50ZXJ2YWwiOjM2MDAsInVzX2FxaSI6NTMsImV1cm9wZWFuX2FxaSI6MzQsInBtMl81IjoxMS4zLCJwbTEwIjoxNS4wfX0=
+  recorded_at: Fri, 18 Sep 2026 18:47:03 GMT
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,cloud_cover,surface_pressure&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max&forecast_hours=24&hourly=temperature_2m,precipitation,precipitation_probability,wind_speed_10m,wind_gusts_10m,wind_direction_10m,weather_code,dew_point_2m,cloud_cover,surface_pressure,visibility,uv_index,soil_temperature_0cm,soil_moisture_0_to_1cm&latitude=37.38605&longitude=-122.08385&precipitation_unit=mm&temperature_unit=celsius&timezone=auto&wind_speed_unit=kmh
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 18:47:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuMzkwMTksImxvbmdpdHVkZSI6LTEyMi4wNzEzMzUsImdlbmVyYXRpb250aW1lX21zIjowLjk2NDc2MDc4MDMzNDQ3MjcsInV0Y19vZmZzZXRfc2Vjb25kcyI6LTI1MjAwLCJ0aW1lem9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQtNyIsImVsZXZhdGlvbiI6MzcuMCwiY3VycmVudF91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsImludGVydmFsIjoic2Vjb25kcyIsInRlbXBlcmF0dXJlXzJtIjoiwrBDIiwiYXBwYXJlbnRfdGVtcGVyYXR1cmUiOiLCsEMiLCJyZWxhdGl2ZV9odW1pZGl0eV8ybSI6IiUiLCJ3ZWF0aGVyX2NvZGUiOiJ3bW8gY29kZSIsImNsb3VkX2NvdmVyIjoiJSIsInN1cmZhY2VfcHJlc3N1cmUiOiJoUGEifSwiY3VycmVudCI6eyJ0aW1lIjoiMjAyNi0wOS0xOFQxMTo0NSIsImludGVydmFsIjo5MDAsInRlbXBlcmF0dXJlXzJtIjoyMC4yLCJhcHBhcmVudF90ZW1wZXJhdHVyZSI6MjIuMiwicmVsYXRpdmVfaHVtaWRpdHlfMm0iOjc3LCJ3ZWF0aGVyX2NvZGUiOjAsImNsb3VkX2NvdmVyIjoxMiwic3VyZmFjZV9wcmVzc3VyZSI6MTAxNS4zfSwiaG91cmx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm0iOiLCsEMiLCJwcmVjaXBpdGF0aW9uIjoibW0iLCJwcmVjaXBpdGF0aW9uX3Byb2JhYmlsaXR5IjoiJSIsIndpbmRfc3BlZWRfMTBtIjoia20vaCIsIndpbmRfZ3VzdHNfMTBtIjoia20vaCIsIndpbmRfZGlyZWN0aW9uXzEwbSI6IsKwIiwid2VhdGhlcl9jb2RlIjoid21vIGNvZGUiLCJkZXdfcG9pbnRfMm0iOiLCsEMiLCJjbG91ZF9jb3ZlciI6IiUiLCJzdXJmYWNlX3ByZXNzdXJlIjoiaFBhIiwidmlzaWJpbGl0eSI6Im0iLCJ1dl9pbmRleCI6IiIsInNvaWxfdGVtcGVyYXR1cmVfMGNtIjoiwrBDIiwic29pbF9tb2lzdHVyZV8wX3RvXzFjbSI6Im3Csy9twrMifSwiaG91cmx5Ijp7InRpbWUiOlsiMjAyNi0wOS0xOFQxMTowMCIsIjIwMjYtMDktMThUMTI6MDAiLCIyMDI2LTA5LTE4VDEzOjAwIiwiMjAyNi0wOS0xOFQxNDowMCIsIjIwMjYtMDktMThUMTU6MDAiLCIyMDI2LTA5LTE4VDE2OjAwIiwiMjAyNi0wOS0xOFQxNzowMCIsIjIwMjYtMDktMThUMTg6MDAiLCIyMDI2LTA5LTE4VDE5OjAwIiwiMjAyNi0wOS0xOFQyMDowMCIsIjIwMjYtMDktMThUMjE6MDAiLCIyMDI2LTA5LTE4VDIyOjAwIiwiMjAyNi0wOS0xOFQyMzowMCIsIjIwMjYtMDktMTlUMDA6MDAiLCIyMDI2LTA5LTE5VDAxOjAwIiwiMjAyNi0wOS0xOVQwMjowMCIsIjIwMjYtMDktMTlUMDM6MDAiLCIyMDI2LTA5LTE5VDA0OjAwIiwiMjAyNi0wOS0xOVQwNTowMCIsIjIwMjYtMDktMTlUMDY6MDAiLCIyMDI2LTA5LTE5VDA3OjAwIiwiMjAyNi0wOS0xOVQwODowMCIsIjIwMjYtMDktMTlUMDk6MDAiLCIyMDI2LTA5LTE5VDEwOjAwIl0sInRlbXBlcmF0dXJlXzJtIjpbMTkuMCwyMC41LDIyLjAsMjMuNiwyNC44LDI0LjcsMjMuNSwyMi4zLDE5LjUsMTcuNiwxNi40LDE1LjUsMTUuMywxNC43LDE0LjEsMTMuNywxMy41LDEzLjksMTMuNywxMy41LDEzLjUsMTMuNywxNS4xLDE3LjBdLCJwcmVjaXBpdGF0aW9uIjpbMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDBdLCJwcmVjaXBpdGF0aW9uX3Byb2JhYmlsaXR5IjpbMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwwLDBdLCJ3aW5kX3NwZWVkXzEwbSI6WzYuOSw5LjQsMTAuOCwxMS45LDEyLjMsMTMuNywxMy45LDEyLjgsMTEuNCw2LjYsMy4yLDYuMywzLjcsMy43LDQuNCw0LjIsNC41LDQuMiwzLjgsMy44LDMuNCwzLjQsNC4wLDQuN10sIndpbmRfZ3VzdHNfMTBtIjpbNy42LDEwLjgsMTIuNiwxNC44LDE1LjUsMTcuMywxOS40LDIwLjUsMTguNywxNS4xLDMuMiw5LjQsNy4yLDYuNSw4LjYsOS43LDcuOSw1LjgsNS4wLDUuNCw1LjQsNS4wLDUuOCw0LjddLCJ3aW5kX2RpcmVjdGlvbl8xMG0iOls2LDcsMzYwLDM1NSwzNTMsMiwxMCwxMCwxOCwyOSwxMTcsMTE0LDE1MSwyMDksMjM1LDIwMCwxNjYsMTQ5LDEzOSwxMzksMTQ4LDE2MiwxMTcsOTBdLCJ3ZWF0aGVyX2NvZGUiOlsxLDAsMCwwLDAsMCwwLDAsMCwwLDAsMCwxLDAsMCwwLDMsNDUsNDUsNDUsNDUsNDUsMiwwXSwiZGV3X3BvaW50XzJtIjpbMTUuNSwxNi4xLDE1LjgsMTQuNSwxMy42LDEzLjMsMTMuOSwxNC4xLDEzLjgsMTMuNSwxMy44LDE0LjAsMTMuOCwxMy40LDEzLjIsMTIuNiwxMi43LDEzLjgsMTMuNywxMy41LDEzLjUsMTMuNiwxMy43LDE0LjNdLCJjbG91ZF9jb3ZlciI6WzIyLDEwLDMsMCwwLDAsMCwwLDAsMCwyLDE1LDMwLDExLDEwLDEzLDkwLDEwMCwxMDAsMTAwLDEwMCwxMDAsNjcsMTddLCJzdXJmYWNlX3ByZXNzdXJlIjpbMTAxNi4zLDEwMTUuMSwxMDE1LjAsMTAxNC44LDEwMTQuMCwxMDEzLjUsMTAxMy4wLDEwMTIuOCwxMDEyLjcsMTAxMy4xLDEwMTMuNCwxMDEzLjMsMTAxMi43LDEwMTIuNiwxMDEyLjMsMTAxMi4xLDEwMTIuMiwxMDEyLjIsMTAxMi40LDEwMTIuMiwxMDEyLjMsMTAxMi4xLDEwMTIuMywxMDEyLjRdLCJ2aXNpYmlsaXR5IjpbMTczMDAuMDAsMTkwMDAuMDAsMjMyMDAuMDAsMzEwMDAuMDAsMzY2MDAuMDAsMzc3MDAuMDAsMzI5MDAuMDAsMjg5MDAuMDAsMjIyMDAuMDAsMTg3MDAuMDAsMTU0MDAuMDAsMTMyMDAuMDAsMTM0MDAuMDAsMTMwMDAuMDAsMTI0MDAuMDAsMTIyMDAuMDAsMTIyMDAuMDAsMjAwLjAwLDEwMC4wMCwxMDAuMDAsMTAwLjAwLDEwMC4wMCwxMzAwMC4wMCwxNTcwMC4wMF0sInV2X2luZGV4IjpbNC41NSw1LjgwLDYuNTAsNi41MCw1LjkwLDQuNzAsMy4xNSwxLjYwLDAuNDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4wMCwwLjAwLDAuMDAsMC4zNSwxLjQ1LDIuOTVdLCJzb2lsX3RlbXBlcmF0dXJlXzBjbSI6WzI1LjgsMjguMywyOS4zLDI5LjcsMjkuMiwyNy41LDI0LjksMjEuMywxNy4yLDE0LjYsMTMuNywxMy40LDEzLjYsMTMuOCwxMy44LDEzLjcsMTMuNiwxMy4zLDEzLjIsMTMuMSwxMi43LDE1LjMsMjIuNywyNi42XSwic29pbF9tb2lzdHVyZV8wX3RvXzFjbSI6WzAuMDYyLDAuMDYxLDAuMDYwLDAuMDU5LDAuMDU5LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU4LDAuMDU5LDAuMDU5LDAuMDYwLDAuMDYwLDAuMDYxLDAuMDYxLDAuMDYxLDAuMDYyLDAuMDYyLDAuMDYzLDAuMDYzLDAuMDYzLDAuMDYzLDAuMDYzXX0sImRhaWx5X3VuaXRzIjp7InRpbWUiOiJpc284NjAxIiwidGVtcGVyYXR1cmVfMm1fbWF4IjoiwrBDIiwidGVtcGVyYXR1cmVfMm1fbWluIjoiwrBDIiwic3VucmlzZSI6Imlzbzg2MDEiLCJzdW5zZXQiOiJpc284NjAxIiwidXZfaW5kZXhfbWF4IjoiIn0sImRhaWx5Ijp7InRpbWUiOlsiMjAyNi0wOS0xOCIsIjIwMjYtMDktMTkiLCIyMDI2LTA5LTIwIiwiMjAyNi0wOS0yMSIsIjIwMjYtMDktMjIiLCIyMDI2LTA5LTIzIiwiMjAyNi0wOS0yNCJdLCJ0ZW1wZXJhdHVyZV8ybV9tYXgiOlsyNC44LDI0LjMsMjQuMiwyNy42LDI3LjksMjkuNywzMC42XSwidGVtcGVyYXR1cmVfMm1fbWluIjpbMTIuOCwxMy41LDEzLjEsMTQuMSwxNC45LDE3LjgsMTguNV0sInN1bnJpc2UiOlsiMjAyNi0wOS0xOFQwNjo1MiIsIjIwMjYtMDktMTlUMDY6NTMiLCIyMDI2LTA5LTIwVDA2OjU0IiwiMjAyNi0wOS0yMVQwNjo1NSIsIjIwMjYtMDktMjJUMDY6NTYiLCIyMDI2LTA5LTIzVDA2OjU3IiwiMjAyNi0wOS0yNFQwNjo1NyJdLCJzdW5zZXQiOlsiMjAyNi0wOS0xOFQxOToxMSIsIjIwMjYtMDktMTlUMTk6MDkiLCIyMDI2LTA5LTIwVDE5OjA4IiwiMjAyNi0wOS0yMVQxOTowNiIsIjIwMjYtMDktMjJUMTk6MDQiLCIyMDI2LTA5LTIzVDE5OjAzIiwiMjAyNi0wOS0yNFQxOTowMSJdLCJ1dl9pbmRleF9tYXgiOls2LjUwLDYuNTUsNS4xNSw2LjQ1LDYuNDAsNi4zNSw2LjM1XX19
+  recorded_at: Fri, 18 Sep 2026 19:18:03 GMT
+- request:
+    method: get
+    uri: https://air-quality-api.open-meteo.com/v1/air-quality?current=us_aqi,european_aqi,pm2_5,pm10&latitude=37.38605&longitude=-122.08385&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - air-quality-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 18:47:11 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuNCwibG9uZ2l0dWRlIjotMTIyLjEsImdlbmVyYXRpb250aW1lX21zIjowLjY2OTEyMTc0MjI0ODUzNTIsInV0Y19vZmZzZXRfc2Vjb25kcyI6LTI1MjAwLCJ0aW1lem9uZSI6IkFtZXJpY2EvTG9zX0FuZ2VsZXMiLCJ0aW1lem9uZV9hYmJyZXZpYXRpb24iOiJHTVQtNyIsImVsZXZhdGlvbiI6MzcuMCwiY3VycmVudF91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsImludGVydmFsIjoic2Vjb25kcyIsInVzX2FxaSI6IlVTQVFJIiwiZXVyb3BlYW5fYXFpIjoiRUFRSSIsInBtMl81IjoizrxnL23CsyIsInBtMTAiOiLOvGcvbcKzIn0sImN1cnJlbnQiOnsidGltZSI6IjIwMjYtMDktMThUMTE6MDAiLCJpbnRlcnZhbCI6MzYwMCwidXNfYXFpIjo1MywiZXVyb3BlYW5fYXFpIjozNCwicG0yXzUiOjExLjMsInBtMTAiOjE1LjB9fQ==
+  recorded_at: Fri, 18 Sep 2026 19:18:03 GMT
 recorded_with: VCR 6.4.0
