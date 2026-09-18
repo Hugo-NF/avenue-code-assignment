@@ -35,7 +35,7 @@ RSpec.describe "Forecasts", type: :request do
 
         expect(response).to redirect_to(root_path)
         expect(session[:address]).to eq("Mountain View, CA")
-        expect(session[:detected_address]).to eq("Mountain View, United States")
+        expect(session[:detected_address]).to eq("Mountain View, United States, 94035")
         expect(session[:latitude]).to eq(37.38605)
         expect(session[:longitude]).to eq(-122.08385)
         expect(session[:geocoding_cache_hit]).to be(false)
@@ -46,7 +46,7 @@ RSpec.describe "Forecasts", type: :request do
 
         follow_redirect!
 
-        expect(inertia.props[:forecast][:detected_address]).to eq("Mountain View, United States")
+        expect(inertia.props[:forecast][:detected_address]).to eq("Mountain View, United States, 94035")
         expect(inertia.props[:forecast][:coordinates]).to eq("37.38605, -122.08385")
         expect(inertia.props[:forecast][:current_temperature]).to be_present
         expect(inertia.props[:forecast][:cache_hit]).to be(false)
@@ -150,11 +150,11 @@ RSpec.describe "Forecasts", type: :request do
         post root_path, params: { address: "Mountain View, CA" }
         post root_path, params: {
           latitude: 37.38605, longitude: -122.08385,
-          detected_address: "Mountain View, United States", units: "imperial"
+          detected_address: "Mountain View, United States, 94035", units: "imperial"
         }
 
         expect(session[:address]).to eq("Mountain View, CA")
-        expect(session[:detected_address]).to eq("Mountain View, United States")
+        expect(session[:detected_address]).to eq("Mountain View, United States, 94035")
         expect(session[:units]).to eq("imperial")
       end
     end
