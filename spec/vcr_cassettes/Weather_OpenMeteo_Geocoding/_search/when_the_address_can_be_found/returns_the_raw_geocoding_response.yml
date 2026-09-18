@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?count=1&name=Mountain%20View,%20CA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - geocoding-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 12:11:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '435'
+      Connection:
+      - keep-alive
+      X-Encoding-Time:
+      - 0.005602836608886719 ms
+    body:
+      encoding: ASCII-8BIT
+      string: '{"results":[{"id":5375480,"name":"Mountain View","latitude":37.38605,"longitude":-122.08385,"elevation":32.0,"feature_code":"PPL","country_code":"US","admin1_id":5332921,"admin2_id":5393021,"timezone":"America/Los_Angeles","population":80435,"postcodes":["94035","94039","94040","94041","94042","94043"],"country_id":6252001,"country":"United
+        States","admin1":"California","admin2":"Santa Clara County"}],"generationtime_ms":0.7612705}'
+  recorded_at: Fri, 18 Sep 2026 12:11:58 GMT
+recorded_with: VCR 6.4.0

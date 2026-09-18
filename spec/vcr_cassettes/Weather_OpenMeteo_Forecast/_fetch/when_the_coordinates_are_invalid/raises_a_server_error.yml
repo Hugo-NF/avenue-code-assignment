@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&latitude=999&longitude=999&temperature_unit=celsius&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.open-meteo.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 12:11:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '81'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6dHJ1ZSwicmVhc29uIjoiTGF0aXR1ZGUgbXVzdCBiZSBpbiByYW5nZSBvZiAtOTAgdG8gOTDCsC4gR2l2ZW46IDk5OS4wLiJ9
+  recorded_at: Fri, 18 Sep 2026 12:11:54 GMT
+recorded_with: VCR 6.4.0

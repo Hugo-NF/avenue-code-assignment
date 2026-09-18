@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://geocoding-api.open-meteo.com/v1/search?count=1&name=asdkfjaslkdfjalskdjf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - geocoding-api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 12:11:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '32'
+      Connection:
+      - keep-alive
+      X-Encoding-Time:
+      - 0.004780292510986328 ms
+    body:
+      encoding: ASCII-8BIT
+      string: '{"generationtime_ms":0.35071373}'
+  recorded_at: Fri, 18 Sep 2026 12:11:59 GMT
+recorded_with: VCR 6.4.0

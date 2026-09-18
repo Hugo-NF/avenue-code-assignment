@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.open-meteo.com/v1/forecast?current=temperature_2m&daily=temperature_2m_max,temperature_2m_min&latitude=37.38605&longitude=-122.08385&temperature_unit=celsius&timezone=auto
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.open-meteo.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Sep 2026 12:11:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJsYXRpdHVkZSI6MzcuMzkwMTksImxvbmdpdHVkZSI6LTEyMi4wNzEzMzUsImdlbmVyYXRpb250aW1lX21zIjowLjE1MDkxODk2MDU3MTI4OTA2LCJ1dGNfb2Zmc2V0X3NlY29uZHMiOi0yNTIwMCwidGltZXpvbmUiOiJBbWVyaWNhL0xvc19BbmdlbGVzIiwidGltZXpvbmVfYWJicmV2aWF0aW9uIjoiR01ULTciLCJlbGV2YXRpb24iOjM3LjAsImN1cnJlbnRfdW5pdHMiOnsidGltZSI6Imlzbzg2MDEiLCJpbnRlcnZhbCI6InNlY29uZHMiLCJ0ZW1wZXJhdHVyZV8ybSI6IsKwQyJ9LCJjdXJyZW50Ijp7InRpbWUiOiIyMDI2LTA5LTE4VDA1OjAwIiwiaW50ZXJ2YWwiOjkwMCwidGVtcGVyYXR1cmVfMm0iOjEzLjJ9LCJkYWlseV91bml0cyI6eyJ0aW1lIjoiaXNvODYwMSIsInRlbXBlcmF0dXJlXzJtX21heCI6IsKwQyIsInRlbXBlcmF0dXJlXzJtX21pbiI6IsKwQyJ9LCJkYWlseSI6eyJ0aW1lIjpbIjIwMjYtMDktMTgiLCIyMDI2LTA5LTE5IiwiMjAyNi0wOS0yMCIsIjIwMjYtMDktMjEiLCIyMDI2LTA5LTIyIiwiMjAyNi0wOS0yMyIsIjIwMjYtMDktMjQiXSwidGVtcGVyYXR1cmVfMm1fbWF4IjpbMjMuNSwyMi45LDI0LjIsMjcuNiwyNy45LDI5LjcsMzAuNl0sInRlbXBlcmF0dXJlXzJtX21pbiI6WzEyLjgsMTIuOCwxNS4xLDE0LjEsMTQuOSwxNy44LDE4LjVdfX0=
+  recorded_at: Fri, 18 Sep 2026 12:11:55 GMT
+recorded_with: VCR 6.4.0
